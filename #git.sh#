@@ -25,7 +25,7 @@ git add .gitignore
 ###############
 git add README.md
 git status
-git commit -am "README update"
+git commit -am "README update 2"
 git push -u origin master
 adalardo
 gitale133113

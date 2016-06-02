@@ -1,5 +1,9 @@
 # lmBuffer
-A R package for sample randomization and linear models output for radii buffers to exclude buffer overlap between observation
+A R package for sample randomization and linear models output for radii buffers to exclude buffer overlap between observation.
+See package documentation for more information
+## Authors
+Alexandre Adalardo de Oliveira and Melina Oliveira Melito
+
 
 ## Installing the package
 
