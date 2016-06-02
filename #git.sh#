@@ -25,3 +25,7 @@ git add .gitignore
 ###############
 git add NAMESPACE
 git status
+git commit -am "modify NAMESPACE"
+git push -u origin master
+adalardo
+gitale133113

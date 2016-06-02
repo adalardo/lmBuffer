@@ -5,6 +5,7 @@
 #' @param respName A vector of names (characters) of the respose variables in respData. Only those are used to generate the linear models
 #' @param predName Name of the predict variable present in respData
 #' @param plotVar Column name with plot code in respData
+#' @param rVar Column name with radii buffer data
 #' @param rBuff Radius size of buffer. Single integer
 #' @param nSample Number of random samples to draw
 #' @param maxRand Maximum number of plot in each random sample
@@ -15,11 +16,12 @@
 #' data(distData)
 #' #' respName <- c("sum.biom", "mean.biom", "prop.pion", "density")
 #' plotVar <- "parcela"
+#' rVar <- "buffer"
 #' predName <- "forest"
 #' rBuff = 1000
 #' applyBuff(respData, distData=distData, respName, predName, plotVar, rBuff = rBuff, nSample = 5, maxRand = 10, minRand = 4)
 lmBuffer <-
-function(respData, distData, respName, predName, plotVar, rBuff = 1000, nSample = 50, maxRand = 10, minRand = 4)
+function(respData, distData, respName, predName, plotVar, rVar, rBuff = 1000, nSample = 50, maxRand = 10, minRand = 4)
 {
     nPlot <- dim(distData)[1]
     plotName <- unique(respData[,plotVar])
@@ -61,7 +63,7 @@ function(respData, distData, respName, predName, plotVar, rBuff = 1000, nSample 
         {
             randNPlot[rr] <- length(randPos)
             randPlot <- plotName[randPos]
-            randResp <- respData[(respData[,plotVar] %in% randPlot) & (respData[,scaleName] == rBuff),]
+            randResp <- respData[(respData[ , plotVar] %in% randPlot) & (respData[ , rVar] == rBuff),]
                 #################################
                 #building lm models and eval them
                 #################################
