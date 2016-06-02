@@ -1,6 +1,11 @@
-install.packages("devtools")
-install.packages("roxygen2")
+#install.packages("devtools")
+#install.packages("roxygen2")
+options(help_type="html")
+
+devtools::install_github("klutometis/roxygen")
 library(devtools)
+library(roxygen2)
+roxygen2::roxygenise()
 document()
 getwd()
 

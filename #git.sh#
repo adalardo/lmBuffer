@@ -1,2 +1,25 @@
 ## starting a git repo
+echo "# lmBuffer" >> README.md
 git init
+## add all files except if in .gitignore file
+git add .
+git commit -am "First commit."
+git remote add origin https://github.com/adalardo/lmBuffer.git
+git push -u origin master
+adalardo
+gitale133113
+#####################
+# outras atualizacoes
+####################
+git add .
+git status
+git commit -am "First commit."
+git remote add origin https://github.com/adalardo/lmBuffer.git
+git push -u origin master
+adalardo
+gitale133113
+##################
+# undoing things
+#################
+git commit --amend
+git add .gitignore

@@ -1,10 +1,10 @@
 Package: lmBuffer
 Type: Package
-Title: What the package does (short line)
-Version: 1.0
+Title: Linear models from a random sample without buffer overlap
+Version: 0.1
 Date: 2016-06-01
-Author: Who wrote it
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
+Author: Alexandre Adalardo de Oliveira and Melina Oliveira Melito
+Maintainer: Alexandre Adalardo de Oliveira  <aleadalardo@gmail.com>
+Description: A R package for sample randomization and to build linear models for buffers with different radii, but excluding overlap between observations
+License: GPL (>=2)
 RoxygenNote: 5.0.1.9000
