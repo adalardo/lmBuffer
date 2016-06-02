@@ -13,8 +13,7 @@ gitale133113
 ####################
 git add .
 git status
-git commit -am "First commit."
-git remote add origin https://github.com/adalardo/lmBuffer.git
+git commit -am "Documentation update"
 git push -u origin master
 adalardo
 gitale133113
@@ -23,3 +22,6 @@ gitale133113
 #################
 git commit --amend
 git add .gitignore
+###############
+git add NAMESPACE
+git status
