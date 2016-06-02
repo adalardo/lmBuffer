@@ -18,7 +18,8 @@ data(respData)
 data(distData)
 respName <- c("sum.biom", "mean.biom", "prop.pion", "density")
 plotVar <- "parcela"
+rVar <- "buffer"
 predName <- "forest"
 rBuff <- seq(100, 1500, by=100)
-resBuffer<- applyBuff(respData, distData=distData, respName, predName, plotVar, rBuff = seq(100, 1500, by=100), nSample = 5, maxRand = 10, minRand = 4)
+resBuffer<- applyBuff(respData, distData=distData, respName, predName, plotVar, rVar, rBuff = rBuff, nSample = 5, maxRand = 10, minRand = 4)
 ```

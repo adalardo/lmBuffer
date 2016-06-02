@@ -23,9 +23,9 @@ gitale133113
 git commit --amend
 git add .gitignore
 ###############
-git add NAMESPACE
+git add R/*
 git status
-git commit -am "modify NAMESPACE"
+git commit -am "change scaleName to rVar"
 git push -u origin master
 adalardo
 gitale133113
