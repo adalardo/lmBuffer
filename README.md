@@ -14,6 +14,7 @@ install_github(repo = 'adalardo/lmBuffer')
 library(lmBuffer)
 ```
 ### Running and testing
+```r
 data(respData)
 data(distData)
 respName <- c("sum.biom", "mean.biom", "prop.pion", "density")

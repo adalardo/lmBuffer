@@ -23,9 +23,9 @@ gitale133113
 git commit --amend
 git add .gitignore
 ###############
-git add R/*
+git add README.md
 git status
-git commit -am "change scaleName to rVar"
+git commit -am "README update"
 git push -u origin master
 adalardo
 gitale133113
