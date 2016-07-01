@@ -20,8 +20,7 @@
 #' predName <- "forest"
 #' rBuff = 1000
 #' applyBuff(respData, distData=distData, respName, predName, plotVar, rBuff = rBuff, nSample = 5, maxRand = 10, minRand = 4)
-lmBuffer <-
-function(respData, distData, respName, predName, plotVar, rVar, rBuff = 1000, nSample = 50, maxRand = 10, minRand = 4)
+lmBuffer <- function(respData, distData, respName, predName, plotVar, rVar, rBuff = 1000, nSample = 50, maxRand = 10, minRand = 4)
 {
     nPlot <- dim(distData)[1]
     plotName <- unique(respData[,plotVar])
@@ -34,17 +33,20 @@ function(respData, distData, respName, predName, plotVar, rVar, rBuff = 1000, nS
     rr = 1
     while (rr <= nSample)
     {
+        #cat(rr, "\n")
         randPos <- vector()
         randPos[1] <- sample(pos,1)
         overPos <- vector()
         overPos <- sort(overBuffList[[randPos]])
         ii=2
-        while(length(randPos) < maxRand & length(overPos)< nPlot)
+        while(length(randPos) < maxRand & length(overPos) < nPlot)
         {
+            #cat(ii, ";")
             resta <- pos[!pos %in% overPos]
             if(length(resta)==1)
             {
-                randPos[ii] <- resta 
+                randPos[ii] <- resta
+                break
             }
             else
             {
@@ -57,7 +59,8 @@ function(respData, distData, respName, predName, plotVar, rVar, rBuff = 1000, nS
             # redo if minRand is not reached
         if(length(randPos) < minRand)
         {
-            next
+           rr=1 
+           next
         }
         else
         {
@@ -76,6 +79,7 @@ function(respData, distData, respName, predName, plotVar, rVar, rBuff = 1000, nS
         rr = rr+1
     }
     results <-as.data.frame(cbind(randNPlot,  rep(rBuff, length(randNPlot)), lmOut))
-    names(results) <- c("Nplots", "Buffer_radius", paste(rep(respName, each=2), c("slope", "r-squared"), sep="_"))
+    names(results) <- c("Nplots", "Buffer_radius", paste(rep(respName, each=2), c("slope", "rsquared"), sep="_"))
     return(results)
 }
+

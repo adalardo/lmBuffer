@@ -20,8 +20,7 @@
 #' predName <- "forest"
 #' rBuff <- seq(100, 1500, by=100)
 #' applyBuff(respData, distData=distData, respName, predName, plotVar, rVar, rBuff = rBuff, nSample = 5, maxRand = 10, minRand = 4)
-applyBuff <-
-function(respData, distData=distData, respName, predName, plotVar, rVar, rBuff = seq(100, 1500, by=100), nSample = 50, maxRand = 10, minRand = 4)
+applyBuff <- function(respData, distData=distData, respName, predName, plotVar, rVar, rBuff = seq(100, 1500, by=100), nSample = 50, maxRand = 10, minRand = 4)
 {
     resBuff <- data.frame()
     vecBuff <- Vectorize(lmBuffer, vectorize.args = "rBuff", SIMPLIFY = FALSE, USE.NAMES = TRUE)
